@@ -4,7 +4,12 @@ export const Navbar = () => {
   return (
     <nav>
       <div>
-        <Link href="google.com">Ecommerce</Link>
+        <Link href="/">Navbar</Link>
+      </div>
+      <div>
+        <Link href="/">Home</Link>
+        <Link href="/products">Products</Link>
+        <Link href="/checkout">Checkout</Link>
       </div>
     </nav>
   );
