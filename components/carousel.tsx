@@ -1,4 +1,5 @@
 "use client";
+
 import Stripe from "stripe";
 import { Card, CardContent, CardTitle } from "./ui/card";
 import { useEffect, useState } from "react";
@@ -41,7 +42,9 @@ export const Carousel = ({ products }: Props) => {
           {currentProduct.name}
         </CardTitle>
         {price && price.unit_amount && (
-          <p>${(price.unit_amount / 100).toFixed(2)}</p>
+          <p className="text-xl text-white">
+            ${(price.unit_amount / 100).toFixed(2)}
+          </p>
         )}
       </CardContent>
     </Card>
