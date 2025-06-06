@@ -10,5 +10,7 @@ export default async function ProductPage({
   const product = await stripe.products.retrieve(id, {
     expand: ["default_price"],
   });
-  return <ProductDetail product={product} />;
+
+  const plainProduct = JSON.parse(JSON.stringify(product));
+  return <ProductDetail product={plainProduct} />;
 }
