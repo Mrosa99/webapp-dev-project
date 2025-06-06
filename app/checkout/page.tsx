@@ -1,9 +1,10 @@
 "use client";
+import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useCartStore } from "@/store/cart-store";
 
 export default function CheckoutPage() {
-  const { items } = useCartStore();
+  const { items, addItem, removeItem } = useCartStore();
   const total = items.reduce(
     (acc, item) => acc + item.price * item.quantity,
     0
@@ -33,6 +34,18 @@ export default function CheckoutPage() {
                   <span>
                     ${((items.price * items.quantity) / 100).toFixed(2)}
                   </span>
+                </div>
+                <div>
+                  <Button
+                    variant="outline"
+                    onClick={() => removeItem(items.id)}
+                  >
+                    -
+                  </Button>
+                  <span className="text-lg font-semibold">
+                    {items.quantity}
+                  </span>
+                  <Button onClick={() => addItem(items)}>+</Button>
                 </div>
               </li>
             ))}
