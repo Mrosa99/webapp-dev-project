@@ -45,7 +45,9 @@ export default function CheckoutPage() {
                   <span className="text-lg font-semibold">
                     {items.quantity}
                   </span>
-                  <Button onClick={() => addItem(items)}>+</Button>
+                  <Button onClick={() => addItem({ ...items, quantity: 1 })}>
+                    +
+                  </Button>
                 </div>
               </li>
             ))}
