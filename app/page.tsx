@@ -12,7 +12,7 @@ export default async function Home() {
 
   return (
     <div>
-      <section className="rounded bg-neutral-100 py-8 sm:py-12">
+      <section className="rounded bg-neutral-200 py-8 sm:py-12 ">
         <div className="mx-auto grid grid-cols-1 items-center justify-items-center gap-8 px-8 sm:px-16 md:grid-cols-2">
           <div className="text-3xl font-bold tracking-tight md:text-4xl">
             <h2>Welcome to my Store</h2>
