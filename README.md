@@ -2,7 +2,9 @@
 
 ## Overview
 
-A modern e-commerce web application built with Next.js, React, and TypeScript. Styled using Tailwind CSS and shadcn/ui components. It features secure Stripe-powered payments, a smooth cart experience powered by Zustand, and a responsive, clean user interface.
+<ins>Please do not use your real card information</ins> when testing the checkout process. This application is in test mode and will not process real payments.
+
+To test the checkout flow, you can use one of [Stripe's test card numbers](https://docs.stripe.com/testing). These test cards are designed specifically for development and will simulate successful or failed transactions.
 
 ## Live Demo
 
@@ -22,6 +24,10 @@ A modern e-commerce web application built with Next.js, React, and TypeScript. S
 - **State Management:** Zustand
 - **Payments:** Stripe API (RESTful)
 - **Deployment:** Vercel
+
+## Instructions to test checkout
+
+To check out please <ins> DO NOT USE YOUR REAL CARD INFORMATION </ins>. App will not accept a payment with real card information but to test the checkout process you can use one of Strpes test cards to make a purchse. The information can be found on their [Test Card Numbers Page](https://docs.stripe.com/testing)
   
 ## Screenshots
 **Home Page:**
